@@ -1,12 +1,19 @@
 <%- include("partials/header.ejs") %> 
 
+   <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edusan Foundation</title>
+    <link rel="icon" href="images/logo.jpeg" type="image/x-icon" />
+    <link rel="stylesheet" href="footer.css" />
+    <link rel="stylesheet" href="nav.css" />
     <style>
-      
-          
-           * {
+          * {
         box-sizing: border-box;
       }
-      body,
+      body
        {
         margin: 0;
         padding: 0;
@@ -24,11 +31,7 @@
         width: 300px;
         margin-bottom: 10px;
       }
-     
-
-  
-
-    .container {
+         .container {
       display: flex;
       flex-direction: column;
       width: 80%;
@@ -107,10 +110,9 @@
       border: none;
       cursor: pointer;
       z-index: 10;
-      padding: 1rem;
-      font-size: 2rem;
+      padding:5px;
+      font-size:1rem;
     }
-
     .carousel-button.left {
       left: 10px;
     }
@@ -118,30 +120,10 @@
     .carousel-button.right {
       right: 10px;
     }
-
     .carousel-button:hover {
       background-color: rgba(0, 0, 0, 0.8);
     }
-
-    @media (max-width: 768px) {
-      .row {
-        flex-direction: column;
-      }
-
-      .col-lg-4 {
-        max-width: 100%;
-      }
-
-      .col-lg-7 {
-        padding: 0;
-      }
-    }
-    @media screen and (max-width: 480px) {
-      h1.display-4 {
-        font-size: 25px;
-      }
-    }
-      button {
+    button {
         background-color: #4caf50;
         color: white;
         padding: 10px 20px;
@@ -149,30 +131,13 @@
         border-radius: 5px;
         cursor: pointer;
       }
-
-      .container {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        margin: 0 auto;
-        padding: 20px;
-      }
-
-      h1 {
-        text-align: center;
-        margin-bottom: 20px;
-        font-size: 24px;
-        font-weight: bold;
-        color: #222;
-      }
-
+      
       .course-list {
   display: flex;
   flex-wrap: wrap; /* Allow wrapping of cards */
   gap: 20px; /* Space between cards */
   justify-content: space-between; /* Distribute space evenly */
 }
-
 .course-card {
   background-color: #fff;
   border-radius: 8px;
@@ -224,34 +189,261 @@
         background-color: #007bff;
         color: #fff;
       }
-      @media screen and (max-width: 768px) {
-  .course-card {
+    
+
+    @media (max-width: 768px) {
+      .row {
+        flex-direction: column;
+      }
+
+      .col-lg-4 {
+        max-width: 100%;
+      }
+
+      .col-lg-7 {
+        padding: 0;
+      }
+      .course-card {
     width: 100%; /* Stack cards vertically on smaller screens */
   }
-}
+  .carousel {
+        height: 200px; /* Example height for smaller screens */
+    }
+
+    .carousel-slide img {
+        object-fit: cover; /* Ensure images scale correctly */
+    }
+  
+    }
+
+    @media screen and (max-width: 480px) {
+      h1.display-4 {
+        font-size: 25px;
+      }
+    }
     </style>
   </head>
   <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-7">
-          <h1 class="display-4">Education</h1>
-          <p class="lead">
-            A newly-established not-for-profit organization, Health Awareness
-            Platform (HAP) was started by Edusan Foundation to be an enabler of
-            state-level capacity to diagnose, redesign, and strengthen
-            healthcare systems in the state, with linkages to national policy.
-            HAP’s mission is to achieve the highest level of efficiency and
-            quality in healthcare systems design in India and will provide
-            professional, rigorous, and evidence-based support to state
-            institutions. HAP will provide context-specific technical assistance
-            to design health systems that meet public health goals. It will
-            bring in technical expertise and global experience to provide
-            strategic oversight and mentorship, and engage in collaborative
-            research, executive training, and cross-learning.
-          </p>
+    <nav class="navbar">
+      <div class="logo-container">
+        <img src="images/logo.jpeg" alt="Edusan Logo" class="logo" />
+        <span class="foundation-name">Edusan Foundation&trade;</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li>
+          <a href="#about">About Us</a>
+          <ul class="dropdown">
+            <li><a href="about.html">Edusan Foundation</a></li>
+            <li><a href="department.html">Department/Recruitment</a></li>
+            <li><a href="awards.html">Awards and Certificates</a></li>
+            <li><a href="testimonial.html">Our testimonials</a></li>
+          </ul>
+        </li>
+        <li><a href="#our-team">Our Team</a></li>
+        <li>
+          <a href="#working-area">Our Working Area</a>
+          <ul class="dropdown">
+            <li><a href="education.html">Education</a></li>
+            <li><a href="#health">Health Care</a></li>
+            <li><a href="#youth">Youth Empowerment</a></li>
+            <li><a href="#scholarship">Edusan Scholarship</a></li>
+            <li><a href="#skill">Skill Development</a></li>
+            <li><a href="#internship">Internship</a></li>
+            <li><a href="#social">Social Welfare Activity</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#gallery">Gallery</a>
+          <ul class="dropdown">
+            <li><a href="photo.html">Photo Gallery</a></li>
+            <li><a href="media.html">Media / News Section</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+<br><br><br>
+<section id="education"> 
+<div class="container">
+  <div class="row">
+    <div class="col-lg-7">
+      <h1 class="display-4">Education</h1>
+      <p class="lead">
+        A newly-established not-for-profit organization, Health Awareness
+        Platform (HAP) was started by Edusan Foundation to be an enabler of
+        state-level capacity to diagnose, redesign, and strengthen
+        healthcare systems in the state, with linkages to national policy.
+        HAP’s mission is to achieve the highest level of efficiency and
+        quality in healthcare systems design in India and will provide
+        professional, rigorous, and evidence-based support to state
+        institutions. HAP will provide context-specific technical assistance
+        to design health systems that meet public health goals. It will
+        bring in technical expertise and global experience to provide
+        strategic oversight and mentorship, and engage in collaborative
+        research, executive training, and cross-learning.
+      </p>
+    </div>
+    <div class="col-lg-4">
+      <div class="carousel">
+        <div class="carousel-slides">
+          <div
+            class="carousel-slide"
+            style="background-image: url('images/cc++.jpg')"
+          ></div>
+          <div
+            class="carousel-slide"
+            style="background-image: url('images/python.jpg')"
+          ></div>
+          <div
+            class="carousel-slide"
+            style="background-image: url('images/persons.png')"
+          ></div>
+          <div
+            class="carousel-slide"
+            style="background-image: url('images/audit.png')"
+          ></div>
         </div>
-        <div class="col-lg-4">
+        <button class="carousel-button left" onclick="goToPrevious()">
+          &#10094;
+        </button>
+        <button class="carousel-button right" onclick="goToNext()">
+          &#10095;
+        </button>
+      </div>
+    </div>
+  </div>       
+        <div class="course-list">
+          <div class="course-card">
+            <div class="course-title">C & C++ Programming</div>
+            <div class="course-desc">A Complete Guide</div>
+            <div class="course-stats">
+              <div class="course-stats-icon">
+                <img src="images/cc++.jpg" />
+              </div>
+            </div>
+
+            <a href="explore.html" class="course-button">Explore</a>
+          </div>
+          <div class="course-card">
+            <div class="course-title">Python Programming</div>
+            <div class="course-desc">A Complete Guide</div>
+            <div class="course-stats">
+              <div class="course-stats-icon">
+                <img src="images/python.jpg" />
+              </div>
+            </div>
+            <a href="explore.html" class="course-button">Explore</a>
+          </div>
+          <div class="course-card">
+            <div class="course-title">
+              Communicative English & Personality Development
+            </div>
+            <div class="course-desc">A Complete Guide</div>
+            <div class="course-stats">
+              <div class="course-stats-icon">
+                <img src="images/persons.png" />
+              </div>
+            </div>
+            <a href="explore.html" class="course-button">Explore</a>
+          </div>
+          <div class="course-card">
+            <div class="course-title">Practical Accounting & Audit Process</div>
+            <div class="course-desc">A Complete Guide</div>
+            <div class="course-stats">
+              <div class="course-stats-icon">
+                <img src="images/audit.png" />
+              </div>
+            </div>
+            <a href="explore.html" class="course-button">Explore</a>
+          </div> 
+        </div> 
+      </div>
+    </section>              
+    
+    <section id="health">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <h1 class="display-4">Edusan Foundation Health Awareness Platform</h1>
+            <p class="lead">
+              A newly-established not-for-profit organization, Health Awareness
+              Platform (HAP) was started by Edusan Foundation to be an enabler of
+              state-level capacity to diagnose, redesign, and strengthen
+              healthcare systems in the state, with linkages to national policy.
+              HAP’s mission is to achieve the highest level of efficiency and
+              quality in healthcare systems design in India and will provide
+              professional, rigorous, and evidence-based support to state
+              institutions. HAP will provide context-specific technical assistance
+              to design health systems that meet public health goals. It will
+              bring in technical expertise and global experience to provide
+              strategic oversight and mentorship, and engage in collaborative
+              research, executive training, and cross-learning.
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <div class="carousel">
+              <div class="carousel-slides">
+                <div
+                  class="carousel-slide"
+                  style="background-image: url('social/blood.jpeg')"
+                ></div>
+                <div
+                  class="carousel-slide"
+                  style="background-image: url('events/teacher.jpg')"
+                ></div>
+                <div
+                  class="carousel-slide"
+                  style="background-image: url('events/youth.jpg')"
+                ></div>
+              </div>
+              <button class="carousel-button left" onclick="goToPrevious()">
+                &#10094;
+              </button>
+              <button class="carousel-button right" onclick="goToNext()">
+                &#10095;
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="youth">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <h1 class="display-4">Empowering Youth Through Education</h1>
+            <p class="lead">
+              The Edusan Foundation’s Youth Empowerment Program (YEP) has been
+              working for 12 years to provide quality elementary education and
+              leadership skills to marginalized youth, particularly those from
+              underprivileged communities. We believe education is key to unlocking
+              the potential of young people, equipping them with essential skills
+              and dispositions for social and economic empowerment. Our initiatives
+              focus on creating inclusive, gender-conscious, and safe learning
+              environments, aligned with the Right to Education Act (2009) and the
+              National Education Policy 2020.
+            </p>
+            <p class="lead"><span class="highlight">Youth Empowerment:</span></p>
+            <ul>
+              <li>Quality education for marginalized youth.</li>
+              <li>Building leadership and life skills.</li>
+              <li>Promoting social and economic empowerment.</li>
+              <li>Inclusive and safe learning environments.</li>
+            </ul>
+            <p class="lead"><span class="highlight">Girl Empowerment:</span></p>
+            <ul>
+              <li>Ensuring equal access to education for marginalized girls.</li>
+              <li>Building leadership skills for girls.</li>
+              <li>Addressing gender disparities in education.</li>
+              <li>Creating safe, gender-conscious learning spaces for girls.</li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-4">
           <div class="carousel">
             <div class="carousel-slides">
               <div
@@ -276,82 +468,335 @@
           </div>
         </div>
       </div>
-    </div>
+        </div>
+      </div>
+    </section>
     
-    <center>
-      <h1><u>Offered Courses</u></h1>
-    </center>
-  </div>
-  <div class="container">
-    <div class="course-list">
-      <div class="course-card">
-        <div class="course-title">C & C++ Programming</div>
-        <div class="course-desc">A Complete Guide</div>
-        <div class="course-stats">
-          <div class="course-stats-icon">
-            <img src="images/cc++.jpg" />
+    <section id="scholarship">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <h1 class="display-4">Edusan Scholarship Program</h1>
+            <p class="lead highlight">
+              Breaking barriers to education through financial support and career
+              guidance.
+            </p>
+            <ul>
+              <li>
+                <strong>Major Issue:</strong> Nearly one-fourth of students drop out
+                due to financial constraints.
+              </li>
+              <li>
+                <strong>Target Beneficiaries:</strong> Marginalized students passing
+                10th or 12th grade.
+              </li>
+              <li>
+                <strong>Key Offerings:</strong>
+                <ul>
+                  <li>
+                    Scholarships for higher education and skill development courses.
+                  </li>
+                  <li>Career guidance and mentorship for career planning.</li>
+                  <li>Quarterly performance-based scholarship renewal.</li>
+                </ul>
+              </li>
+            </ul>
           </div>
+          <div class="col-lg-4">
+          <div class="carousel">
+            <div class="carousel-slides">
+              <div
+                class="carousel-slide"
+                style="background-image: url('social/blood.jpeg')"
+              ></div>
+              <div
+                class="carousel-slide"
+                style="background-image: url('events/teacher.jpg')"
+              ></div>
+              <div
+                class="carousel-slide"
+                style="background-image: url('events/youth.jpg')"
+              ></div>
+            </div>
+            <button class="carousel-button left" onclick="goToPrevious()">
+              &#10094;
+            </button>
+            <button class="carousel-button right" onclick="goToNext()">
+              &#10095;
+            </button>
+          </div>
+        </div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </section>
+   
+    <section id="skill">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <h1 class="display-4">Skill Development at Edusan Foundation</h1>
+            <p class="lead">
+              <span class="highlight">Key Focus Areas:</span>
+            </p>
+            <ul>
+              <li>Skilling for the formal sector</li>
+              <li>Employment-oriented training</li>
+              <li>Demand-driven approach with industry collaboration</li>
+            </ul>
+            <p class="lead">
+              <span class="highlight">Delivery Model:</span>
+            </p>
+            <ul>
+              <li>Edusan Foundation Skill Development Centres (EFSDC)</li>
+              <li>Collaboration with partner organizations</li>
+              <li>Community and industry-focused centers</li>
+            </ul>
+            <p class="lead">
+              <span class="highlight">Features of EFSDC:</span>
+            </p>
+            <ul>
+              <li>State-of-the-art labs and modern amenities</li>
+              <li>Focus on theoretical and practical training</li>
+              <li>Guest lectures and industry visits</li>
+              <li>Global-standard infrastructure</li>
+              <li>Accreditation by sector skills councils</li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-4">
+          <div class="carousel">
+            <div class="carousel-slides">
+              <div
+                class="carousel-slide"
+                style="background-image: url('social/blood.jpeg')"
+              ></div>
+              <div
+                class="carousel-slide"
+                style="background-image: url('events/teacher.jpg')"
+              ></div>
+              <div
+                class="carousel-slide"
+                style="background-image: url('events/youth.jpg')"
+              ></div>
+            </div>
+            <button class="carousel-button left" onclick="goToPrevious()">
+              &#10094;
+            </button>
+            <button class="carousel-button right" onclick="goToNext()">
+              &#10095;
+            </button>
+          </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="internship">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <h1 class="display-4">Edusan Foundation Internship Program</h1>
+            <ul>
+              <li>
+                <strong>NGO Internships:</strong> 
+                <li>Duration: 15 days to 1 month.</li>
+                <li>Roles: Volunteers or interns assisting in education drives,
+                healthcare camps, environment projects, etc. </li>
+                <li>Learning Outcomes:
+                Teamwork, communication skills, and grassroots project experience.</li>
+                <li>Benefits: Certificates and exposure to social impact initiatives.</li>
+                <li>Eligibility: Open to students and professionals passionate about
+                community service.</li>
+              </li>
+              <li>
+                <strong>Technical Internships:</strong>
+              </li>
+    
+              <li>Duration: 1 month to 6 months.</li>
+              <li>
+                Focus: Hands-on projects in web development, app development, AI/ML,
+                data science, IoT, etc.
+              </li>
+              <li>
+                Learning Outcomes: Practical experience, industry-relevant skills,
+                and mentorship.
+              </li>
+              <li>
+                Benefits: Certificates, networking opportunities, and career
+                readiness.
+              </li>
+              <li>
+                Eligibility: Engineering students or tech enthusiasts with basic
+                knowledge of the domain.
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <div class="carousel">
+              <div class="carousel-slides">
+                <div
+                  class="carousel-slide"
+                  style="background-image: url('social/blood.jpeg')"
+                ></div>
+                <div
+                  class="carousel-slide"
+                  style="background-image: url('events/teacher.jpg')"
+                ></div>
+                <div
+                  class="carousel-slide"
+                  style="background-image: url('events/youth.jpg')"
+                ></div>
+              </div>
+              <button class="carousel-button left" onclick="goToPrevious()">
+                &#10094;
+              </button>
+              <button class="carousel-button right" onclick="goToNext()">
+                &#10095;
+              </button>
+            </div>
+          </div>
+        </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   
+    <section id="social">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7">
+            <h1 class="display-4">Edusan Foundation Social Welfare Activities</h1>
+            <p class="lead">
+              The Edusan Foundation is committed to uplifting communities through
+              education, healthcare, and sustainable development. Its mission is to
+              foster an inclusive society where everyone can thrive
+            </p>
+    
+            <p class="lead">
+              <span class="highlight">Key Focus Areas:</span>
+            </p>
+            <ul>
+              <li>
+                Education: Providing quality education, scholarships, and digital
+                literacy programs for underprivileged children.
+              </li>
+              <li>
+                Healthcare: Organizing health camps and promoting mental and
+                physical well-being.
+              </li>
+              <li>
+                Community Development: Supporting skill-building, sustainable
+                livelihoods, and empowering marginalized groups.
+              </li>
+              <li>
+                Environmental Sustainability: Advocating for green initiatives like
+                tree plantations and waste management.
+              </li>
+            </ul>
+          </div>
+          
+          <div class="col-lg-4">
+          <div class="carousel">
+            <div class="carousel-slides">
+              <div
+                class="carousel-slide"
+                style="background-image: url('social/blood.jpeg')"
+              ></div>
+              <div
+                class="carousel-slide"
+                style="background-image: url('events/teacher.jpg')"
+              ></div>
+              <div
+                class="carousel-slide"
+                style="background-image: url('events/youth.jpg')"
+              ></div>
+            </div>
+            <button class="carousel-button left" onclick="goToPrevious()">
+              &#10094;
+            </button>
+            <button class="carousel-button right" onclick="goToNext()">
+              &#10095;
+            </button>
+          </div>
+        </div>
+      </div>
+      </div>
+          </div>
+        </div>
+      </div>
+      <br /><br /><br /><br />
+    </section>
+    <footer>
+      <div class="footer-container">
+        <!-- Foundation Logo -->
+        <div class="footer-logo">
+          <img src="images/logo.jpeg" alt="Edusan Foundation Logo" />
         </div>
 
-        <a href="/explore" class="course-button">Explore</a>
-      </div>
-      <div class="course-card">
-        <div class="course-title">Python Programming</div>
-        <div class="course-desc">A Complete Guide</div>
-        <div class="course-stats">
-          <div class="course-stats-icon">
-            <img src="images/python.jpg" />
-          </div>
-        </div>
-        <a href="/explore" class="course-button">Explore</a>
-      </div>
-      <div class="course-card">
-        <div class="course-title">
-          Communicative English & Personality Development
-        </div>
-        <div class="course-desc">A Complete Guide</div>
-        <div class="course-stats">
-          <div class="course-stats-icon">
-            <img src="images/persons.png" />
-          </div>
-        </div>
-        <a href="/explore" class="course-button">Explore</a>
-      </div>
-      <div class="course-card">
-        <div class="course-title">Practical Accounting & Audit Process</div>
-        <div class="course-desc">A Complete Guide</div>
-        <div class="course-stats">
-          <div class="course-stats-icon">
-            <img src="images/audit.png" />
-          </div>
+        <!-- Contact Details -->
+        <div class="footer-contact">
+          <h4>Contact Us</h4>
+          <ul>
+            <li><i class="fas fa-phone"></i> +91 91724 48760</li>
+            <li><i class="fas fa-envelope"></i> nileshhkale@gmail.com</li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i> 542, New Subhedar Lay Out,
+              Thawre Colony Road, Nagpur-440024(Maharashtra)
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <p>&copy; 2024 Edusan Foundation. All Rights Reserved.</p>
+            </li>
+          </ul>
         </div>
 
-        <a href="/explore" class="course-button">Explore</a>
+        <!-- Social Media Links -->
+        <div class="footer-social">
+          <a href="https://facebook.com" target="_blank">
+            <img src="images/fface.webp" alt="Facebook" />
+          </a>
+          <a href="https://twitter.com" target="_blank">
+            <img src="images/finsta.png" alt="Twitter" />
+          </a>
+          <a href="https://instagram.com" target="_blank">
+            <img src="images/fyoutube.png" alt="Instagram" />
+          </a>
+          <a href="https://instagram.com" target="_blank">
+            <img src="images/Whatsapp.png" alt="Instagram" />
+          </a>
+        </div>
       </div>
-    </div>
-  </div>
-  <br /><br /><br /><br />
-  <script>
-    let currentIndex = 0;
-    function updateCarousel() {
-      const slides = document.querySelector(".carousel-slides");
-      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-    function goToPrevious() {
-      const totalSlides = document.querySelectorAll(".carousel-slide").length;
-      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-      updateCarousel();
-    }
-    function goToNext() {
-      const totalSlides = document.querySelectorAll(".carousel-slide").length;
-      currentIndex = (currentIndex + 1) % totalSlides;
-      updateCarousel();
-    } // Auto-play functionality
-    setInterval(() => {
-      goToNext();
-    }, 3000);
-  </script>
+    </footer>
+    <script>
+      let currentIndex = 0;
+      function updateCarousel() {
+        const slides = document.querySelector(".carousel-slides");
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }
+      function goToPrevious() {
+        const totalSlides = document.querySelectorAll(".carousel-slide").length;
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+      }
+      function goToNext() {
+        const totalSlides = document.querySelectorAll(".carousel-slide").length;
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateCarousel();
+      } // Auto-play functionality
+      setInterval(() => {
+        goToNext();
+      }, 3000);
+    </script>
+    
+    <script src="script.js"></script>
   </body>
+</html>
+
  
 
 <%- include("partials/footer.ejs") %>
